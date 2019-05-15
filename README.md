@@ -5,12 +5,21 @@
 [![PyPI](https://img.shields.io/pypi/l/atx.svg)]()
 [![Gitter](https://badges.gitter.im/codeskyblue/ATX.svg)](https://gitter.im/codeskyblue/ATX?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
+## 重要说明 ！！！
+
+ATX目前已经分成了两个项目
+
+- 安卓(Android) https://github.com/openatx/uiautomator2  简称u2
+- 苹果(iOS) https://github.com/openatx/facebook-wda
+
+旧项目不再维护。欢迎入群讨论 QQ: `499563266`
+
 ## Introduction (简介)
 ATX(AutomatorX) 是一款开源的自动化测试工具，支持测试iOS平台和Android平台的原生应用、游戏、Web应用。
 使用Python来编写测试用例，混合使用图像识别，控件定位技术来完成游戏的自动化。附加专用的IDE来完成脚本的快速编写。
 
 ## Hope (愿景)
-希望该项目可以让手机手机应用测试自动化起来，让测试人员摆脱那些枯燥的重复性工作。
+希望该项目可以让手机应用测试自动化起来，让测试人员摆脱那些枯燥的重复性工作。
 
 ## 重要说明
 新版本以采用新的uiautomator2替换到原来的[atx-uiautomator](https://github.com/openatx/atx-uiautomator). 历史版本可以通过Tag查看[tag:1.1.3](https://github.com/NetEaseGame/ATX/tree/1.1.3)
@@ -36,14 +45,14 @@ BTW: atx-webide已经不在维护
 ## Discuss (讨论群)
 面向游戏行业测试人员，当然也开放给国际友人(PS：中文不知道他们看得懂不)
 
-- QQ: `497460177` PS: 因为我们公司上不了QQ, 所以不会经常上
-- 网易内部用户加Popo群 `1347390` 群主 `hzsunshx`
+- QQ: `499563266` PS: 因为群人数即将到达上限，所以目前进群有收取少量的群费,来募集扩大群规模的费用。
+- ~~网易内部用户加Popo群 `1347390` 群主 `hzsunshx`~~
 - [Testerhome社区](https://testerhome.com/topics/node78)
 - ~~[Gitter Chat Room](https://gitter.im/codeskyblue/AutomatorX?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)~~
 
 ## Limitation (限制)
-- Python >= 2.7 && <= 3.6
-- Android 4.1+
+- Python 2.7 or 3.6
+- Android 4.4+
 - iOS 9.0+ with Mac
 - adb >= 1.0.36
 
@@ -79,10 +88,10 @@ pip install opencv_contrib_python
 	* [Windows adb安装指南](https://github.com/NetEase/AutomatorX/wiki/Win-Installation)
 	* Mac上的adb可以通过命令行安装 `brew install android-platform-tools`
 
-- [ATX手机助手.apk](https://o8oookdsx.qnssl.com/atx-assistant-1.0.4.apk)
+- [ATX手机助手.apk](https://github.com/NetEaseGame/ATX/releases/download/1.0.12/atx-assistant-1.0.6.apk)
 
 	该App为自动化提供了输入法的功能，屏幕常量等功能
-	命令行安装 `python -m atx install atx-assistant`
+	~~命令行安装 `python -m atx install atx-assistant`~~
 
 **iOS测试依赖**
 
@@ -120,9 +129,11 @@ python -m atx doctor
 
 ## Getting Started （必看）
 * [快速入门文档](docs/QUICKSTART.md)
-* [如何使用内置的测试报告功能](atx/ext/report/README.md)
+* [~~如何使用内置的测试报告功能~~](atx/ext/report/README.md)
 * [ATX资料快速索引](https://testerhome.com/topics/9091)
 * [Testerhome上的ATX有关的文章列表](https://testerhome.com/topics/node78)
+
+内置的测试报告暂时有点问题，最近没时间去修复了。因为ATX底层使用的[uiautomator2](https://github.com/openatx/uiautomator2)，测试报告可以用底层库自带的 [SimpleHTMLReport](https://github.com/openatx/uiautomator2/tree/master/uiautomator2/ext/htmlreport)
 
 ## APIs (接口文档)
 * [常用接口](docs/API.md)
